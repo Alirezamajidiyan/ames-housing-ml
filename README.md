@@ -39,45 +39,6 @@ data/raw/ames_housing.csv
 
 ---
 
-## ساختار پروژه
-
-```bash
-project/
-├── data/
-│   ├── raw/
-│   │   └── ames_housing.csv
-│   └── processed/
-│       └── README.md
-│
-├── models/
-│   ├── linear_regression_pipeline.joblib
-│   ├── random_forest_pipeline.joblib
-│   ├── xgboost_pipeline.joblib
-│   └── README.md
-│
-├── notebooks/
-│
-├── reports/
-│   ├── figures/
-│   │   ├── model_comparison.png
-│   │   └── xgboost_feature_importance.png
-│   └── model_comparison.csv
-│
-├── src/
-│   ├── __init__.py
-│   ├── preprocessing.py
-│   ├── train.py
-│   └── evaluate.py
-│
-├── main.py
-├── requirements.txt
-├── requirements-notebook.txt
-├── .gitignore
-└── README.md
-```
-
----
-
 ## تحلیل اکتشافی داده‌ها
 
 در مرحله EDA، موارد زیر بررسی شدند:
@@ -187,7 +148,7 @@ reports/figures/xgboost_feature_importance.png
 ### 1) کلون کردن پروژه
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Alirezamajidiyan/ames-housing-ml.git
 cd ames-housing-ml
 ```
 
