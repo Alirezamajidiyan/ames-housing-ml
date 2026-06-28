@@ -1,33 +1,38 @@
-# Python cache files
+# فایل‌های کش پایتون
 __pycache__/
 *.py[cod]
 
-# Virtual environment
+# محیط مجازی
 .venv/
 venv/
 env/
 
-# Jupyter Notebook
+# فایل‌های موقت ژوپیتر
 .ipynb_checkpoints/
 
-# VS Code
+# تنظیمات ادیتور
 .vscode/
 
-# OS generated files
+# فایل‌های سیستمی
 .DS_Store
 Thumbs.db
 
-# Environment variables
+# متغیرهای محیطی
 .env
 
-# Trained models
-models/
+# مدل‌های آموزش‌دیده
+models/*
+!models/README.md
 *.pkl
 *.joblib
 *.model
 *.bin
 
-# Python test/build artifacts
+# داده‌های پردازش‌شده
+data/processed/*
+!data/processed/README.md
+
+# فایل‌های تست و بیلد
 .pytest_cache/
 .mypy_cache/
 .coverage
@@ -35,6 +40,3 @@ htmlcov/
 dist/
 build/
 *.egg-info/
-
-
-models/*.joblib
