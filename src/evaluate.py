@@ -50,22 +50,46 @@ def plot_model_comparison(results_df, output_path="reports/figures/model_compari
     # یک شکل با سه نمودار کنار هم می‌سازیم
     fig, axes = plt.subplots(1, 3, figsize=(18, 5))
 
-    # نمودار مقایسه RMSE
-    sns.barplot(data=results_df, x="model_name", y="rmse", ax=axes[0], palette="Blues_d")
+    # نمودار مقایسه RMSE (رفع وارنینگ با اضافه کردن hue و legend)
+    sns.barplot(
+        data=results_df, 
+        x="model_name", 
+        y="rmse", 
+        ax=axes[0], 
+        palette="Blues_d", 
+        hue="model_name", 
+        legend=False
+    )
     axes[0].set_title("RMSE Comparison")
     axes[0].set_xlabel("Model")
     axes[0].set_ylabel("RMSE")
     axes[0].tick_params(axis="x", rotation=15)
 
-    # نمودار مقایسه MAE
-    sns.barplot(data=results_df, x="model_name", y="mae", ax=axes[1], palette="Greens_d")
+    # نمودار مقایسه MAE (رفع وارنینگ با اضافه کردن hue و legend)
+    sns.barplot(
+        data=results_df, 
+        x="model_name", 
+        y="mae", 
+        ax=axes[1], 
+        palette="Greens_d", 
+        hue="model_name", 
+        legend=False
+    )
     axes[1].set_title("MAE Comparison")
     axes[1].set_xlabel("Model")
     axes[1].set_ylabel("MAE")
     axes[1].tick_params(axis="x", rotation=15)
 
-    # نمودار مقایسه R2
-    sns.barplot(data=results_df, x="model_name", y="r2_score", ax=axes[2], palette="Oranges_d")
+    # نمودار مقایسه R2 (رفع وارنینگ با اضافه کردن hue و legend)
+    sns.barplot(
+        data=results_df, 
+        x="model_name", 
+        y="r2_score", 
+        ax=axes[2], 
+        palette="Oranges_d", 
+        hue="model_name", 
+        legend=False
+    )
     axes[2].set_title("R2 Comparison")
     axes[2].set_xlabel("Model")
     axes[2].set_ylabel("R2 Score")
@@ -75,3 +99,4 @@ def plot_model_comparison(results_df, output_path="reports/figures/model_compari
     plt.tight_layout()
     plt.savefig(output_path, dpi=300, bbox_inches="tight")
     plt.close()
+
